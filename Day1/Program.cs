@@ -12,11 +12,9 @@ static int Sum(IEnumerable<string> lines)
         .Sum();
 }
 
-
 static IEnumerable<string> ReplaceWordsWithNumbers(IList<string> lines)
 {
     var stringNumbers = new List<string> { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-
 
     for (var i = 0; i < lines.Count; i++)
     {
@@ -29,8 +27,8 @@ static IEnumerable<string> ReplaceWordsWithNumbers(IList<string> lines)
                 lines[i] = lines[i].Insert(insertionIndex,
                     valueToInsert);
             }
-                
         }
     }
+
     return lines;
 }
